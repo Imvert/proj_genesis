@@ -1,9 +1,8 @@
 const _gpdao = require("../Daos/GpDao");
 
-const saveGp = async (req, rest) => {
-  const { dataFormJson } = req.body;
-  const result = await _gpdao.insert(JSON.parse(dataFormJson));
-  /* Aqui logica de comportamiento de acuerdo a la respuesta del acceso a datos */
+const saveGp = async (req, res) => {
+  const result = await _gpdao.insert(JSON.stringify(req.body));
+  res.json(result);
 };
 
 module.exports = { saveGp };

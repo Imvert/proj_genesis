@@ -13,4 +13,5 @@ const insert = async (data) => {
   }
 };
 
+
 module.exports = { insert };
