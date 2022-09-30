@@ -1,21 +1,27 @@
 // Conexion con REST-MSSQL-NODEJS
 
 const rest = new (require("rest-mssql-nodejs"))({
-  user: "Trabajo",
-  password: "alexander21",
-  server: "LAPTOPALEX",
+  user: "sa",
+  password: "1844.",
+  server: "JSONMC\\SQLEXPRESS",
   database: "bd_gpue_genesis",
-  pool: {
-    max: 10,
-    min: 10,
-    idleTimeoutMillis: 30000,
-  },
+  port: 1433,
+  // dateStrings: "date",
+  // enableArithAbort: true,
+  // port: 1433,
+  // pool: {
+  //   max: 10,
+  //   min: 10,
+  //   idleTimeoutMillis: 30000,
+  // },
   // requestTimeout: 180000, // for timeout setting
   // connectionTimeout: 180000, // for timeout setting
   options: {
-    encrypt: false, // this is optional, by default is false
+    encrypt: true, // this is optional, by default is false
+    trustedconnection: true,
     enableArithAbort: true,
-    // trustServerCertificate: true,
+    trustServerCertificate: true,
+    //instancename: "",
   },
 });
 

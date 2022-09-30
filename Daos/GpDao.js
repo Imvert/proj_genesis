@@ -1,17 +1,15 @@
 const rest = require("../Conexion/MssqlRestConnection");
+const response = require("../Models/ResponseModel");
 
 const insert = async (data) => {
   try {
     let result = await rest.executeStoredProcedure("SPGuardarGP", null, {
       dataFormJson: data,
     });
-    console.log(result);
-    return result;
+    return response.estructura(result.data);
   } catch (err) {
-    console.log(err);
-    return null;
+    return response.estructura(0, "Error en el proceso", "Error");
   }
 };
-
 
 module.exports = { insert };

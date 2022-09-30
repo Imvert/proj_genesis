@@ -6,8 +6,8 @@ const {
   getIglesias,
   getTipoGp,
 } = require("../Controllers/SelectsController");
-
 const router = express.Router();
+
 router.use("/gp/save", saveGp);
 router.use("/mision", getMisiones);
 router.use("/distrito/:idMision", getDistritos);
