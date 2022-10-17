@@ -1,5 +1,5 @@
-const rest = require("../Conexion/MssqlRestConnection");
-const response = require("../Models/ResponseModel");
+const rest = require("../conexion/rest-mssql-connection");
+const response = require("../Models/response-model");
 
 const insert = async (data) => {
   try {

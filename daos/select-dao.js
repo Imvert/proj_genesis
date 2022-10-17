@@ -1,5 +1,5 @@
-const rest = require("../Conexion/MssqlRestConnection");
-const response = require("../Models/ResponseModel");
+const rest = require("../conexion/rest-mssql-connection");
+const response = require("../models/response-model");
 
 //Enlista todas las misiones
 const misionList = async () => {

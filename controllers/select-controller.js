@@ -1,4 +1,4 @@
-const _selectDao = require("../Daos/SelectsDao");
+const _selectDao = require("../daos/select-dao");
 
 const getMisiones = async (req, rest) => {
   const result = await _selectDao.misionList();

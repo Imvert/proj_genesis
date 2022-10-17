@@ -1,11 +1,11 @@
 const express = require("express");
-const { saveGp } = require("../Controllers/GpController");
+const { saveGp } = require("../Controllers/gp-controller");
 const {
   getMisiones,
   getDistritos,
   getIglesias,
   getTipoGp,
-} = require("../Controllers/SelectsController");
+} = require("../Controllers/select-controller");
 const router = express.Router();
 
 router.use("/gp/save", saveGp);
